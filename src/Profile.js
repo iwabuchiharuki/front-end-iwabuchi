@@ -33,14 +33,16 @@ export default function Profile() {
         label="編集"
       />
 
-      {/*全体位置指定*/}
+      {/*全体位置指定 */}
+
       <Grid
         container
         direction="column"
         justifyContent="center"
         alignItems="center"
       >
-        <Grid>
+      
+        <Grid item xs={5} sm={8} pt={5}>
           {/*画像サイズ指定　初期画像は{img}user.jpg*/}
           <img
             src={img}
@@ -53,7 +55,7 @@ export default function Profile() {
           />
         </Grid>
 
-        <Grid>
+        <Grid item xs={5} sm={8} pt={5}>
           <TextField
             id="standard-textarea"
             label="名前"
@@ -63,7 +65,7 @@ export default function Profile() {
           />
         </Grid>
 
-        <Grid>
+        <Grid item xs={5} sm={8} pt={5}>
           <TextField
             id="standard-textarea"
             label="自己紹介"
