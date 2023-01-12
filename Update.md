@@ -12,6 +12,6 @@
 
 12/23 App.css更新　
 
-1/11 Home.js Home.css更新(design)
+1/11 Home.js Home.css更新(デザイン)
 
-1/12 Profile.js 更新(design)
+1/12 Profile.js 更新 Edit更新 MatchingUser更新 Requestuser更新 (デザイン) button.css追加(ボタンのデザイン)
