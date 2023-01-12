@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
+import "./profile.css";
 
 export default function Edit() {
   /*プロフィール画像処理*/
@@ -50,15 +51,19 @@ export default function Edit() {
 
   return (
     <Box>
-      <Button
-        variant="outlined"
-        color="primary"
-        style={{
-          width: "60px",
-          height: "50px",
-        }}
-        label="戻る"
-      />
+      <br />
+      <br />
+      <br />
+      <Grid
+        container
+        direction="row"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <div class="button">
+          <a href="#">戻る</a>
+        </div>
+      </Grid>
 
       {/*全体位置指定*/}
       <Grid
@@ -144,17 +149,19 @@ export default function Edit() {
           />
         </Grid>
 
-        <Grid item xs={5} sm={8} pt={5}>
-          <Button
-            variant="outlined"
-            color="primary"
-            style={{
-              width: "60px",
-              height: "50px",
-              marginLeft: "440px",
-            }}
-            label="保存"
-          />
+        <Grid
+          item
+          xs={5}
+          sm={8}
+          pt={5}
+          container
+          direction="row"
+          justifyContent="flex-end"
+          alignItems="center"
+        >
+          <div class="button">
+            <a href="#">保存</a>
+          </div>
         </Grid>
       </Grid>
     </Box>
