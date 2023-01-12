@@ -15,9 +15,9 @@ export default function Footer() {
   return (
     <Box>
       <AppBar position="fixed" color="primary" sx={{ top: "auto", bottom: 0 }}>
-        <Toolbar>
-          {/*タイトルに行く？*/}
-          <a href="index.html" style={{ color: "white" }}>
+        <Toolbar >
+          {/*利用規約に行く？　画面作成未定？*/}
+          <a href="#" target="_blank" style={{ color: "white" }}>
             <Typography variant="h10" component="div">
               利用規約
             </Typography>
