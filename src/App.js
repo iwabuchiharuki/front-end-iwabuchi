@@ -1,44 +1,42 @@
-import Header from './Header';
-import Profile from './Profile';
-import Edit  from './Edit';
-import Home from './Home';
-import Matching from './Matchinguser';
-import Request from './Requestuser';
-import Footer from './Footer';
-import Chat from './Chat';
-import Title from './title';
-import Title2 from './titleunder';
-
+import Header from "./Header";
+import Profile from "./Profile";
+import Edit from "./Edit";
+import Home from "./Home";
+import Matching from "./Matchinguser";
+import Request from "./Requestuser";
+import Footer from "./Footer";
+import Chat from "./Chat";
+import Title from "./title";
+import Title2 from "./titleunder";
+import Tos from "./Tos";
+import "./App.css"
 
 function App() {
   return (
-    
     <div className="App">
-   
-    {/*<Header />  {/*ヘッダー */}
+      {/*<Header />  {/*ヘッダー */}
 
-    {/*<Profile />{/*プロフィール画面*/}
-  
-    {/*<Edit />{/*プロフィール編集画面*/}
+      {/*<Profile />{/*プロフィール画面*/}
 
-    {/*<Home />{/*ホーム画面*/}
+      {/*<Edit />{/*プロフィール編集画面*/}
 
-    {/*<Matching/>{/*マッチングユーザ画面*/}
+      {/*<Home />{/*ホーム画面*/}
 
-    {/*<Request/>{/*リクエストユーザ画面*/}
+      {/*<Matching/>{/*マッチングユーザ画面*/}
 
-    {/*<Chat/>{/*チャット画面*/}
+      {/*<Request/>{/*リクエストユーザ画面*/}
 
-    <Title/>{/*タイトル画面*/}
-    <Title2/>{/*タイトル画面*/}
+      {/*<Chat/>{/*チャット画面*/}
+      
 
-    {/*<Footer/>{/*フッター*/}
+      {/*<Title />{/*タイトル画面*/}
+      {/*<Title2 />
+      {/*タイトル画面*/}
 
-    
-
-
+      <Tos/>{/*利用規約*/}
+      {/*<Footer/>{/*フッター*/}
+      
     </div>
-    
   );
 }
 
