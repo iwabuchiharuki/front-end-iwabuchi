@@ -13,3 +13,5 @@
 12/23 App.css更新　
 
 1/11 Home.js Home.css更新(design)
+
+1/12 Profile.js 更新(design)
