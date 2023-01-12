@@ -4,23 +4,27 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import ReactStars from "react-rating-stars-component";
+import "./button.css";
 
 export default function Matchinguser() {
-
   /*星マークの受付*/
   const ratingChanged = (newRating) => {};
 
   return (
     <Box>
-      <Button
-        variant="outlined"
-        color="primary"
-        style={{
-          width: "60px",
-          height: "50px",
-        }}
-        label="戻る"
-      />
+      <br />
+      <br />
+      <br />
+      <Grid
+        container
+        direction="row"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <div class="button">
+          <a href="#">戻る</a>
+        </div>
+      </Grid>
 
       {/*全体位置指定*/}
       <Grid
@@ -44,7 +48,9 @@ export default function Matchinguser() {
 
         {/*マッチングしたユーザ名*/}
         <Grid>名前</Grid>
-        
+
+        <br />
+
         {/*星マーク指定　星の数 星のサイズ*/}
         <Grid>
           評価
@@ -54,9 +60,11 @@ export default function Matchinguser() {
             size={24}
             activeColor="#ffd700"
           />
+          <br />
           <label>実績: 件</label>
         </Grid>
 
+        <br />
         <Grid>
           <TextField
             id="standard-textarea"
@@ -68,23 +76,15 @@ export default function Matchinguser() {
         </Grid>
 
         <Grid item xs={5} sm={8} pt={5}>
-          <Button
-            style={{
-              width: "300px",
-              height: "50px",
-            }}
-            label="コーチングリクエストを送る"
-          />
+          <div class="button2">
+            <a href="#">コーチングリクエストを送る</a>
+          </div>
         </Grid>
 
         <Grid item xs={5} sm={8} pt={5}>
-          <Button
-            style={{
-              width: "300px",
-              height: "50px",
-            }}
-            label="保留する"
-          />
+          <div class="button2">
+            <a href="#">保留する</a>
+          </div>
         </Grid>
       </Grid>
     </Box>
