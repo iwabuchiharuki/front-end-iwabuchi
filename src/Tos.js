@@ -5,11 +5,12 @@ export default function Tos() {
   return (
     <Box>
     <div class="center">
-      <a class="btn">
+      <a href="#" class="btn">{/*1つ前の画面に戻れるようにしたい*/}
         <span class="btn__text">利用規約</span>
         <span class="btn__text">戻る</span>
       </a>
       </div>
+  
 
       <br />
       <div class="center">
