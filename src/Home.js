@@ -14,8 +14,7 @@ import Typography from "@mui/material/Typography";
 import valo from "./valo.jpg";
 import apex from "./apex.jpg";
 import spla from "./spla.jpg";
-
-import "./Home.css"
+import "./Home.css";
 
 /*タグの一覧*/
 
@@ -82,44 +81,39 @@ export default function Home() {
           </a>
         </Grid>
       </Grid>
-      
-      {/*ニュース的なもの*/}
-      <text class="text">News</text>
 
-      <Grid
-        container
-        direction="row"
-        justifyContent="space-evenly"
-        alignItems="center"
-      >
-        <text class="game">VALORANT</text>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia sx={{ height: 140 }} image={valo} title="news valo" />
-          <CardContent>
-            <Typography variant="h6" color="black">
-              valo champion group of team performance
-            </Typography>
-          </CardContent>
-        </Card>
-        <text class="game">Apex Legends</text>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia sx={{ height: 140 }} image={apex} title="news apex" />
-          <CardContent>
-            <Typography variant="h6" color="black" >
-              apex champion group of team performance
-            </Typography>
-          </CardContent>
-        </Card>
-        <text class="game">Splatoon</text>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia sx={{ height: 140 }} image={spla} title="news spla" />
-          <CardContent>
-            <Typography variant="h6" color="black">
-              spla champion group of team performance
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+      {/*ニュース的なもの*/}
+      <text class="text">
+        <span>News</span>
+      </text>
+
+      <text class="game">VALORANT</text>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia sx={{ height: 140 }} image={valo} title="news valo" />
+        <CardContent>
+          <Typography variant="h6" color="black">
+            valorant champion group team performance
+          </Typography>
+        </CardContent>
+      </Card>
+      <text class="game">Apex Legends</text>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia sx={{ height: 140 }} image={apex} title="news apex" />
+        <CardContent>
+          <Typography variant="h6" color="black">
+            apex legends champion group team performance
+          </Typography>
+        </CardContent>
+      </Card>
+      <text class="game">Splatoon</text>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia sx={{ height: 140 }} image={spla} title="news spla" />
+        <CardContent>
+          <Typography variant="h6" color="black">
+            splatoon champion group team performance
+          </Typography>
+        </CardContent>
+      </Card>
     </box>
   );
 }
