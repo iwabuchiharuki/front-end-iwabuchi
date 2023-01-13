@@ -1,11 +1,23 @@
 .text{
-    font-size: 50px;
+    font-size: 40px;
     font-family: "sans-serif";
     font-style: italic;
-    text-decoration: underline;
 }
 
 .game{
     font-weight: bold;
     display: flex;
+    font-size: 30px;
 }
+
+.ichigyou img{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.ichigyou span{
+    display: inline-block;
+    text-indent:1em;
+    font-size: 20px;
+}
+
