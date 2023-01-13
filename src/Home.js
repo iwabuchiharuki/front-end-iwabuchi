@@ -11,9 +11,9 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import valo from "./valo.jpg";
-import apex from "./apex.jpg";
-import spla from "./spla.jpg";
+import valo from "./valosen.jpg";
+import apex from "./apexsen.jpg";
+import spla from "./splasen.jpg";
 import "./Home.css";
 
 /*タグの一覧*/
@@ -81,39 +81,42 @@ export default function Home() {
           </a>
         </Grid>
       </Grid>
-
-      {/*ニュース的なもの*/}
+      <br />
+      <br />
+      {/*ニュース的なもの**/}
       <text class="text">
-        <span>News</span>
+        <>News</>
       </text>
-
+      <hr />
+      <br />
+      <div class="hrtitle" />
       <text class="game">VALORANT</text>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia sx={{ height: 140 }} image={valo} title="news valo" />
-        <CardContent>
-          <Typography variant="h6" color="black">
-            valorant champion group team performance
-          </Typography>
-        </CardContent>
-      </Card>
+      <p class="ichigyou">
+        <img src={valo} width="300" />
+        <a>
+          <span>VALORANT champion play game skill</span>
+        </a>
+        {/*(仮)ユーザの記事？*/}
+      </p>
+      <hr />
+
       <text class="game">Apex Legends</text>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia sx={{ height: 140 }} image={apex} title="news apex" />
-        <CardContent>
-          <Typography variant="h6" color="black">
-            apex legends champion group team performance
-          </Typography>
-        </CardContent>
-      </Card>
+      <p class="ichigyou">
+        <img src={apex} width="300" />
+        <a>
+          <span>Apex Legends champion play game skill</span>
+        </a>
+      </p>
+      <hr />
+
       <text class="game">Splatoon</text>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia sx={{ height: 140 }} image={spla} title="news spla" />
-        <CardContent>
-          <Typography variant="h6" color="black">
-            splatoon champion group team performance
-          </Typography>
-        </CardContent>
-      </Card>
+      <p class="ichigyou">
+        <img src={spla} width="300" />
+        <a>
+          <span>Splatoon champion play game skill</span>
+        </a>
+      </p>
+      <hr />
     </box>
   );
 }
