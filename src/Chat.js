@@ -11,9 +11,13 @@ import {
 export default function Chat() {
   return (
     //画面サイズ
-    <div style={{ position: "relative", height: "700px" }}>
+    <div style={{ position: "relative", height: "1000px" }}>
+      <br/>
+      <br/>
+      <br/>
       <MainContainer>
         <ChatContainer>
+             
           <MessageList>
             {/*左側のユーザ messageに文字*/}
             <Message
@@ -24,17 +28,8 @@ export default function Chat() {
               {/*senderで名前*/}
               <Message.Footer sender="name" />
             </Message>
-
-            <Message
-              model={{
-                message: "Hello my friend",
-              }}
-            >
-              {/*senderで名前*/}
-              <Message.Footer sender="name" />
-            </Message>
           </MessageList>
-          {/*attachButtonは添付を使うかのもの MessageInputはメッセージを送信するためにいれるもの*/}
+          {/*attachButtonはファイル参照 MessageInputはメッセージを送信するためにいれるもの*/}
           <MessageInput
             placeholder="メッセージを入力してください"
             attachButton={false}
