@@ -7,17 +7,18 @@ import {
   Message,
   MessageInput,
 } from "@chatscope/chat-ui-kit-react";
+import "./Chat.css";
 
 export default function Chat() {
   return (
     //画面サイズ
     <div style={{ position: "relative", height: "1000px" }}>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <div class="title">チャット</div>
       <MainContainer>
         <ChatContainer>
-             
           <MessageList>
             {/*左側のユーザ messageに文字*/}
             <Message
