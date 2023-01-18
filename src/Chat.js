@@ -29,7 +29,7 @@ export default function Chat() {
               <Message.Footer sender="name" />
             </Message>
           </MessageList>
-          {/*attachButtonはファイル参照 MessageInputはメッセージを送信するためにいれるもの*/}
+          {/*MessageInputはメッセージを送信するためにいれるもの*/}
           <MessageInput
             placeholder="メッセージを入力してください"
             attachButton={false}
