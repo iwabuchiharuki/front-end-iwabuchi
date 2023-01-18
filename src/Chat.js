@@ -16,6 +16,7 @@ export default function Chat() {
       <br />
       <br />
       <br />
+      {/*相手ユーザの名前にするのか?　チャットでいいのか?*/}
       <div class="title">チャット</div>
       <MainContainer>
         <ChatContainer>
