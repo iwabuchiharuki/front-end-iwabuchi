@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios, { formToJSON } from "axios";
 import Avatar from "react-avatar-edit";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
-import img from "./user.jpg";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import "./profile.css";
+import apigatewayConf from "../gate/apigateway";
 
 export default function Edit() {
   /*プロフィール画像処理*/
@@ -15,8 +15,46 @@ export default function Edit() {
   const [src] = useState(false);
   const [profile, setprofile] = useState([]);
   const [pview, setpview] = useState(false);
-  const profileFinal = profile.map((item) => item.pview);
 
+  /*サムネイル画像処理*/
+  const [thumbnail_imagecrop, setthumbnail_imagecrop] = useState("");
+  const [thumbnail_src] = useState(false);
+  const [thumbnail_profile, setthumbnail_profile] = useState([]);
+  const [thumbnail_pview, setthumbnail_pview] = useState(false);
+
+  const profileFinal = profile.map((item) => item.pview);
+  const API_ENDPOINT = apigatewayConf.EDIT_END_POINT;
+
+  // const queryParam = '?suid=' + currentUserID;  本来はcurrentUserIDを設定、今はダミーで代用
+  const queryParam = "?id=test-id-value-00";
+  const getURL = API_ENDPOINT + "/deploy0_0/get" + queryParam;
+
+  //マウント時に初期プロフィール画像を設定
+  useEffect(() => {
+    console.log(getURL);
+    axios
+      .get(getURL, {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+      })
+      .then((res) => {
+        console.log(res.data[0].picture);
+        setpview(res.data[0].picture);
+        values.nickname = res.data[0].nickname;
+        values.intro = res.data[0].intro;
+        values.haveSkill = res.data[0].haveSkill;
+        values.wantSkill = res.data[0].wantSkill;
+        values.picture = res.data[0].picture;
+        values.thumbnail = res.data[0].thumbnail;
+        console.log(values);
+        console.log("データ取得成功");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+
+  /*受け取り画像処理*/
   const onClose = () => {
     setpview(null);
   };
@@ -25,7 +63,6 @@ export default function Edit() {
     setpview(view);
   };
 
-  /*受け取り画像処理*/
   const saveCropImage = () => {
     if (pview != pview) {
       setprofile([...profile, { pview }]);
@@ -36,18 +73,64 @@ export default function Edit() {
 
   /*タグの一覧 変更する場合はここから*/
   const tag = [
-    { label: "Shoot" },
-    { label: "Capacity" },
-    { label: "Judge" },
-    { label: "Other" },
+    { label: "ApexLegends" },
+    { label: "Splatoon3" },
+    { label: "Valolant" },
+    { label: "League of Legends" },
   ];
 
-  const tag2 = [
-    { label: "Shoot" },
-    { label: "Capacity" },
-    { label: "Judge" },
-    { label: "Other" },
-  ];
+  // 値を変更した時にvalueに保存
+  const [values, setValues] = React.useState({
+    //ダミーユーザーId
+    uid: "test-id-value-00",
+    nickname: "",
+    intro: "",
+    haveSkill: "",
+    wantSkill: "",
+    picture: "",
+    thumbnail: "",
+  });
+
+  //nicknameの値を更新
+  const handleChange_nick = (nickname) => (event) => {
+    setValues({ ...values, [nickname]: event.target.value });
+  };
+
+  //introの値を更新
+  const handleChange_intro = (intro) => (event) => {
+    setValues({ ...values, [intro]: event.target.value });
+  };
+
+  //haveSkillの値の更新
+  const [inputValue_have, setInputValue_have] = React.useState("");
+
+  //wantSkillの値の更新
+  const [inputValue_want, setInputValue_want] = React.useState("");
+
+  //保存ボタンをクリックでAPIで編集結果を送信
+  const onClickGetAPI = async () => {
+    const sendURL = API_ENDPOINT + "/deploy0_0/send";
+
+    //pictureにプレビューした画像のバイナリを格納
+    values.picture = pview;
+    values.thumbnail = "ダミー";
+
+    console.log(sendURL);
+    console.log(values);
+    try {
+      const response = await axios.post(sendURL, values, {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apigatewayConf.API_KEY,
+        },
+      });
+      console.log(response.data);
+      alert("リクエストを送信しました");
+    } catch (error) {
+      console.error(error);
+      alert("リクエスト処理に失敗しました");
+    }
+  };
 
   return (
     <Box>
@@ -75,6 +158,7 @@ export default function Edit() {
         <Grid>
           {/*画像位置*/}
           <img
+            class="anime"
             style={{
               width: "200px",
               height: "200px",
@@ -82,7 +166,8 @@ export default function Edit() {
               objectFit: "cover",
             }}
             onClick={() => setimagecrop(true)}
-            src={profileFinal.length ? profileFinal : img}
+            /*初期画像*/
+            src={profileFinal.length ? profileFinal : pview}
             alt=""
           />
 
@@ -114,6 +199,8 @@ export default function Edit() {
             placeholder="name"
             multiline
             variant="standard"
+            onChange={handleChange_nick("nickname")}
+            //画面描画時に取得したユーザー名を初期値として設定
           />
         </Grid>
 
@@ -124,6 +211,8 @@ export default function Edit() {
             placeholder="hello!!"
             multiline
             variant="standard"
+            onChange={handleChange_intro("intro")}
+            //画面描画時に取得した自己紹介を初期値として設定
           />
         </Grid>
 
@@ -133,8 +222,16 @@ export default function Edit() {
             disablePortal
             id="combo-box-demo"
             options={tag}
-            sx={{ width: 400 }}
+            sx={{ width: 300 }}
             renderInput={(params) => <TextField {...params} label="Teaching" />}
+            //onInputChangeでvaluesにhaveSkillの値を一時的に保存する
+            inputValue_have={inputValue_have}
+            value={values.haveSkill}
+            onInputChange={(event, newInputValue) => {
+              console.log(newInputValue);
+              setInputValue_have(newInputValue);
+              setValues({ ...values, haveSkill: newInputValue });
+            }}
           />
         </Grid>
 
@@ -142,10 +239,18 @@ export default function Edit() {
           教わりたい技術
           <Autocomplete
             disablePortal
-            id="combo-box-demo"
-            options={tag2}
-            sx={{ width: 400 }}
-            renderInput={(params) => <TextField {...params} label="Teaching" />}
+            id="combo-box-demo2"
+            options={tag}
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} label="coaching" />}
+            //onInputChangeでvaluesにwantSkillの値を一時的に保存する
+            inputValue_want={inputValue_want}
+            value={values.wantSkill}
+            onInputChange={(event, newInputValue) => {
+              console.log(newInputValue);
+              setInputValue_want(newInputValue);
+              setValues({ ...values, wantSkill: newInputValue });
+            }}
           />
         </Grid>
 
@@ -160,7 +265,7 @@ export default function Edit() {
           alignItems="center"
         >
           <div class="button">
-            <a href="#">保存</a>
+            <a onClick={onClickGetAPI}>保存</a>
           </div>
         </Grid>
       </Grid>
