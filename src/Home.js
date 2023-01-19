@@ -62,7 +62,7 @@ export default function Home() {
         </Grid>
 
         <Grid item xs={5} sm={5} pt={5}>
-          <a href="Inform.js" target={"_blank"}>
+          <a href="#" target={"_blank"}>
             <IconButton>
               <NotificationsIcon sx={{ fontSize: 100, flexGrow: 1 }} />
             </IconButton>
@@ -70,7 +70,7 @@ export default function Home() {
         </Grid>
 
         <Grid item xs={5} sm={4} pt={3}>
-          <a href="Dm.html" target={"_blank"}>
+          <a href="#" target={"_blank"}>
             <IconButton>
               <ForumIcon sx={{ fontSize: 100, flexGrow: 1 }} />
             </IconButton>
@@ -88,9 +88,12 @@ export default function Home() {
       <div class="hrtitle" />
       <text class="game">VALORANT</text>
       <p class="ichigyou">
-        <img src={valo} width="300" />
+        <img src={valo} width="500" />
         <a>
-          <span>VALORANT champion play game skill</span>
+          <span>まさか!?ヨル使いのエキスパート現る!!!～逆張りに学べ～</span>
+          <br />
+          <br />
+          <span>先週アクティブユーザー〇人</span>
         </a>
         {/*(仮)ユーザの記事？*/}
       </p>
@@ -98,18 +101,24 @@ export default function Home() {
 
       <text class="game">Apex Legends</text>
       <p class="ichigyou">
-        <img src={apex} width="300" />
+        <img src={apex} width="500" />
         <a>
-          <span>Apex Legends champion play game skill</span>
+          <span>プレデターに挑戦中の猛者現る!!!</span>
+          <br />
+          <br />
+          <span>先週アクティブユーザー最多!!!</span>
         </a>
       </p>
       <hr />
 
       <text class="game">Splatoon</text>
       <p class="ichigyou">
-        <img src={spla} width="300" />
+        <img src={spla} width="500" />
         <a>
-          <span>Splatoon champion play game skill</span>
+          <span>コーチングによりX帯到達者現る!!!</span>
+          <br />
+          <br />
+          <span>先週アクティブユーザー〇人</span>
         </a>
       </p>
       <hr />
