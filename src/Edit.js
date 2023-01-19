@@ -192,6 +192,7 @@ export default function Edit() {
           </Dialog>
         </Grid>
 
+        <br/>
         <Grid>
           <TextField
             id="standard-textarea"
@@ -203,6 +204,7 @@ export default function Edit() {
             //画面描画時に取得したユーザー名を初期値として設定
           />
         </Grid>
+        <br/>
 
         <Grid>
           <TextField
