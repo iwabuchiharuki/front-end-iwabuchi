@@ -13,7 +13,7 @@
 .game{
     font-weight: bold;
     display: flex;
-    font-size: 30px;
+    font-size: 30px;  
 }
 
 .ichigyou img{
@@ -23,6 +23,10 @@
 
 .ichigyou span{
     display: inline-block;
-    text-indent:1em;
+    text-indent:3em;
     font-size: 20px;
+}
+
+span:hover{
+    color: red;
 }
