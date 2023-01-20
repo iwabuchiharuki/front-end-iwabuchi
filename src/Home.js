@@ -95,7 +95,6 @@ export default function Home() {
           <br />
           <span>先週アクティブユーザー〇人</span>
         </a>
-        {/*(仮)ユーザの記事？*/}
       </p>
       <hr />
 
@@ -114,12 +113,12 @@ export default function Home() {
       <text class="game">Splatoon</text>
       <p class="ichigyou">
         <img src={spla} width="500" />
-        <a>
+         <a>
           <span>コーチングによりX帯到達者現る!!!</span>
           <br />
           <br />
           <span>先週アクティブユーザー〇人</span>
-        </a>
+          </a>
       </p>
       <hr />
     </box>
