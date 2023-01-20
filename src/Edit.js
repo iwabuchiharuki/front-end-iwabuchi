@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import apigatewayConf from "../gate/apigateway";
+import apigatewayConf from "../gateway/apigateway";
 
 export default function Edit() {
   /*プロフィール画像処理*/
