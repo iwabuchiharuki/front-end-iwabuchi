@@ -10,7 +10,7 @@ export default function titleunder() {
   return (
     <Box>
       {/*カードサイズ sx={{ maxWidth: 300 }} */}
-      <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}  class="back">
+      <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}  class="body">
         <CardContent>
           {/*カードのヘッダー*/}
           <CardHeader
