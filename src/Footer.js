@@ -10,14 +10,16 @@ import {
   LineIcon,
   TwitterIcon,
 } from "react-share";
+import "./footer.css";
+
 
 export default function Footer() {
   return (
     <Box>
-      <AppBar position="fixed" color="primary" sx={{ top: "auto", bottom: 0 }}>
+      <AppBar class="footer">
         <Toolbar >
           {/*利用規約に行く？　画面作成未定？*/}
-          <a href="#" target="_blank" style={{ color: "white" }}>
+          <a href="#" target="_blank" style={{ color: "black" }}>
             <Typography variant="h10" component="div">
               利用規約
             </Typography>
