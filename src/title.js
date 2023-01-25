@@ -6,17 +6,17 @@ import './title.css';
 
 export default function title() {
   return (
-    <Box>
+    <Box class="body2">
       {/*タイトルの位置*/}
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={50}>
+      <Box sx={{ flexGrow: 1 }} >
+        <Grid container spacing={50} >
           <Grid item xs={12} align="center">
             <Typography variant="h2"  class="text1" >Game Skill TeO</Typography>
           </Grid>
           <Grid item xs={12} align="center">
-          <Typography variant="h1"class="text1" >It's great to be able to do what I can't.</Typography>
+          <Typography variant="h1"class="text1" >ゲームスキルに磨きを</Typography>
           </Grid>
-          <Grid item xs={12} align="center" >
+          <Grid item xs={12} align="center">
           <Typography variant="h2" class="text1" >利用手順</Typography>
           </Grid>
         </Grid>
