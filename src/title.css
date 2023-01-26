@@ -1,8 +1,4 @@
-/*bodyは背景画像  background-color: black; width: 100vw;
-  height: 100vh;*/
-  /* animation: move 13s infinite both;
-    background: linear-gradient(#FFB3E7,#FF54C9);
-    */
+/*bodyは背景画像  background-color: black; width: 100vw;*/
   .body {
     margin: 0;
     background-size: cover;
@@ -11,23 +7,7 @@
     background-color: black;
   }
   
-  /*アニメーション　画像の切り替え  @keyframes move {
-    0% {
-      background-image: url("apex.jpg");
-      background-size: 150% auto;
-    }
-  
-    50% {
-      background-image: url("valo.jpg");
-      background-size: 240% auto;
-    }
-  
-    100% {
-      background-image: url("spla.jpg");
-      background-size: 150% auto;
-    }
-  }*/
- 
+
   
   .body2 {
     margin: 0;
@@ -63,7 +43,23 @@
   .text1 {
     font-family: "sans-serif";
     font-style: italic;
-    font-size: 50px;
+    font-size: 150px;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px rgb(18, 18, 18), 0 0 1em rgb(57, 5, 245), 0 0 0.2em rgb(15, 109, 232);
+    animation: fadeIn 2s ease 0s 1 normal;
+  }
+  
+  /*textのフェード*/
+  @keyframes fadeIn{
+    0% {opacity: 0}
+  100% {opacity: 1}
+  }
+
+   /*上の文字2つ　text-shadow:0 5px 5px rgb(5, 5, 5);*/
+   .text2 {
+    font-family: "sans-serif";
+    font-style: italic;
+    font-size: 100px;
     color: aliceblue;
     text-shadow: 1px 1px 2px rgb(18, 18, 18), 0 0 1em rgb(57, 5, 245), 0 0 0.2em rgb(15, 109, 232);
     animation: fadeIn 2s ease 0s 1 normal;
@@ -115,3 +111,35 @@
   a:hover::before, a:hover::after {
     width: 100%;
   }
+
+
+/*ここから利用手順のCSS*/
+/*吹き出し*/
+
+  .bubble051 {
+    font-size: 50px;
+    width: 360px; 
+    color:#FFF;
+    background-color: #195000;
+    border: 5px solid #09f8b0;
+}
+
+.basyo{
+  margin: 0;
+  padding: 0;
+}
+
+.bubble05 {
+    position: relative;
+    display: inline-block;
+    width: 310px; 
+    text-align: center;
+    color:#FFF;
+    padding: 25px;
+    background-color: #f39800;
+    border-radius: 5px;
+    border-bottom-color:#1e90ff;
+    border: 5px solid #09f8b0;
+
+}
+
