@@ -6,6 +6,14 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import './title.css';
+//利用手順
+import SearchIcon from "@mui/icons-material/Search";
+import ChatIcon from "@mui/icons-material/Chat";
+import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
+import SecurityUpdateGoodIcon from "@mui/icons-material/SecurityUpdateGood";
+import GroupAddIcon from "@mui/icons-material/GroupAdd";
+import GroupRemoveIcon from "@mui/icons-material/GroupRemove";
+import StarIcon from "@mui/icons-material/Star";
 
 
 export default function title() {
@@ -21,10 +29,141 @@ export default function title() {
           <Typography variant="h1"class="text1" >ゲームスキルに磨きを</Typography>
           </Grid>
           <Grid item xs={12} align="center">
-          <Typography variant="h2" class="text1" >利用手順</Typography>
+          <Typography variant="h2" class="text2" >利用手順</Typography>
           </Grid>
         </Grid>
       </Box>
+      <div>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={3} sm={3}>
+          <div class="bubble051">
+            <br />
+            <div class="basyo">Student</div>
+          </div>
+        </Grid>
+        <Grid item xs={3}>
+          <div class="bubble051">
+            <br />
+            <div>Teacher</div>
+          </div>
+        </Grid>
+      </Grid>
+      {/*ここまでOK*/}
+      <br />
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={3} sm={3}>
+          <div class="bubble05">
+            <SearchIcon sx={{ fontSize: 80 }} />
+            <br />
+            <div>ホームから条件に合うユーザーを検索</div>
+          </div>
+        </Grid>
+        <Grid item xs={3}>
+          <div class="bubble05">
+            <SecurityUpdateGoodIcon sx={{ fontSize: 80 }} />
+            <br />
+            <div>コーチングリクエスト受信</div>
+          </div>
+        </Grid>
+      </Grid>
+
+      <br />
+
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={3} sm={3}>
+          <div class="bubble05">
+            <ThumbUpAltIcon sx={{ fontSize: 80 }} />
+            <br />
+            <div>検索したユーザーにリクエストを送信。</div>
+            <div>相手の反応を待ちましょう。</div>
+          </div>
+        </Grid>
+        <Grid item xs={3}>
+          <div class="bubble05">
+            <GroupAddIcon sx={{ fontSize: 80 }} />
+            <GroupRemoveIcon sx={{ fontSize: 80 }} />
+            <br />
+            <div>承認するとマッチングが成立します。</div>
+            <div>拒否するとリクエストが消失します。</div>
+          </div>
+        </Grid>
+      </Grid>
+
+      <br />
+
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={3} sm={3}>
+          <div class="bubble05">
+            <ChatIcon sx={{ fontSize: 80 }} />
+            <br />
+            <div>マッチングが成立したら</div>
+            <div>DMで会話をしましょう</div>
+          </div>
+        </Grid>
+        <Grid item xs={3}>
+          <div class="bubble05">
+            <ChatIcon sx={{ fontSize: 80 }} />
+            <br />
+            <div>マッチングが成立したら</div>
+            <div>DMで会話をしましょう</div>
+          </div>
+        </Grid>
+      </Grid>
+
+      <br />
+
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={3} sm={3}>
+          <div class="bubble05">
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <br />
+            <div>コーチング終了後お互いに評価</div>
+          </div>
+        </Grid>
+        <Grid item xs={3}>
+          <div class="bubble05">
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <StarIcon sx={{ fontSize: 20 }} />
+            <br />
+            <div>コーチング終了後お互いに評価</div>
+          </div>
+        </Grid>
+      </Grid>
+    </div>
+    <br/>
+    <br/>
       <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}  class="body2">
         <CardContent>
           {/*カードのヘッダー*/}
