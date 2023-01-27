@@ -15,15 +15,18 @@ import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import GroupRemoveIcon from "@mui/icons-material/GroupRemove";
 import StarIcon from "@mui/icons-material/Star";
 
-
+{/*Game Skill TeO */}
 export default function title() {
   return (
     <Box class="body2">
       {/*タイトルの位置*/}
       <Box sx={{ flexGrow: 1 }} >
-        <Grid container spacing={50} >
+        <Grid container spacing={0} >
           <Grid item xs={12} align="center">
-            <Typography variant="h2"  class="text1" >Game Skill TeO</Typography>
+            <Typography variant="h2"  class="text1" >Mu-Tech
+            <><div class="text3">[ミューテク]</div></>
+            </Typography>
+            
           </Grid>
           <Grid item xs={12} align="center">
           <Typography variant="h1"class="text1" >ゲームスキルに磨きを</Typography>
