@@ -46,7 +46,7 @@ export default function title() {
         <Grid item xs={3} sm={3}>
           <div class="bubble051">
             <br />
-            <div class="basyo">Student</div>
+            <div >Student</div>
           </div>
         </Grid>
         <Grid item xs={3}>
