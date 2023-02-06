@@ -21,3 +21,5 @@
 1/19 chat.js Chat.css更新 Edit更新　Home画面更新
 
 1/26 Title更新(デザイン)
+
+2/6　Profile更新(レビュー評価追加)
