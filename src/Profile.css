@@ -1,0 +1,37 @@
+  hr {
+    height: 5px;
+    background-color: red;
+    width: 100%;
+    border: none;
+   }
+
+.box {
+    padding: 1em 1.5em;
+    margin: 2em 0;
+    border: double 4px #ff69b4;/*線*/
+    width: 170px;
+    height: auto;
+}
+
+.item-center{
+    text-align: center;
+    font-size: 30px;
+}
+
+.scroll{
+    overflow: auto;
+    width:300px;
+    height:500px;
+}
+
+.center-box{
+    display: flex;
+    border: solid 1px black;
+    padding: 5px;
+  }
+
+.center-text{
+    display: flex;
+    padding: 5px;
+    font-size: 30px;
+}
