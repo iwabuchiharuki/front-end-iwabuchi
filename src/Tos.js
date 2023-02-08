@@ -1,10 +1,10 @@
-import Box from "@mui/material/Box";
 import "./Tos.css";
+{/*参考サイト https://kiyaku.jp/hinagata/gp.html*/}
 
 export default function Tos() {
   return (
-    <Box>
-      <div class="center">
+    <div>
+      <div class="centermoji">
         <a href="#" class="btn">
           <span class="btn__text">利用規約</span>
           <span class="btn__text">戻る</span>
@@ -12,7 +12,7 @@ export default function Tos() {
       </div>
 
       <br />
-      <div class="moji">1.適用</div>
+      <div class="mojimidashi">1.適用</div>
       <hr class="keisen"/>
       <br />
       <div>
@@ -29,7 +29,7 @@ export default function Tos() {
         個別規定において特段の定めなき限り，個別規定の規定が優先されるものとします。
       </div>
       <br />
-      <div class="moji">2.利用登録</div>
+      <div class="mojimidashi">2.利用登録</div>
       <hr class="keisen"/>
       <br />
 
@@ -37,7 +37,7 @@ export default function Tos() {
         (1)本サービスにおいては，登録希望者が本規約に同意の上，本サービスの定める方法によって利用登録を申請し，本サービスがこれを承認することによって，利用登録が完了するものとします。
       </div>
       <br />
-      <div class="moji">3.ユーザIDおよびパスワードの管理</div>
+      <div class="mojimidashi">3.ユーザIDおよびパスワードの管理</div>
       <hr class="keisen"/>
       <br />
       <div>
@@ -52,7 +52,7 @@ export default function Tos() {
         (3)ユーザーID及びパスワードが第三者によって使用されたことによって生じた損害は、本サービスに故意又は重大な過失がある場合を除き、本サービスは一切の責任を負わないものとします。
       </div>
       <br />
-      <div class="moji">4.禁止事項</div>
+      <div class="mojimidashi">4.禁止事項</div>
       <hr class="keisen"/>
       <br />
       <div>(1)法令または公序良俗に違反する行為</div>
@@ -94,7 +94,7 @@ export default function Tos() {
       <br />
       <div>(15)その他，本サービスが不適切と判断する行為</div>
       <br />
-      <div class="moji">5.本サービスの停止等</div>
+      <div class="mojimidashi">5.本サービスの停止等</div>
       <hr class="keisen"/>
       <br />
       <div>
@@ -107,20 +107,20 @@ export default function Tos() {
         または損害についても，一切の責任を負わないものとします
       </div>
       <br />
-      <div class="moji">6.退会</div>
+      <div class="mojimidashi">6.退会</div>
       <hr class="keisen"/>
       <br />
       <div>
         ユーザーは，本サービスが定める退会手続により，本サービスから退会できるものとします。
       </div>
       <br />
-      <div class="moji">7.個人情報の取り扱い</div>
+      <div class="mojimidashi">7.個人情報の取り扱い</div>
       <hr class="keisen"/>
       <br />
       <div>
         本サービスの利用によって取得する個人情報については，
         「プライバシーポリシー」に従い適切に取り扱うものとします。
       </div>
-    </Box>
+    </div>
   );
 }
