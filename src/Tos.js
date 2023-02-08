@@ -5,7 +5,7 @@ export default function Tos() {
   return (
     <div>
       <div class="centermoji">
-        <a href="#" class="btn">
+        <a href="home.html" class="btn">
           <span class="btn__text">利用規約</span>
           <span class="btn__text">戻る</span>
         </a>
