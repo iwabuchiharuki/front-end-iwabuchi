@@ -5,11 +5,11 @@ a{
 }
 
 /*文字の位置（利用規約）*/
-.center{
+.centermoji{
     text-align: center;
 }
 /*文字の書体とサイズ指定処理*/
-.moji{
+.mojimidashi{
     font-size: 20pt;
     font-family: '游ゴシック Medium', sans-serif;
     font-weight: bold;
