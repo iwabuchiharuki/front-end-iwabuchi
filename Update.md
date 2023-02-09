@@ -26,4 +26,4 @@
 
 2/8 Tos更新(デザイン)
 
-2/9 Tos更新(cssのa削除)
+2/9 Tos更新(cssのa削除) これが参考サイトです。(利用規約)https://kiyaku.jp/hinagata/gp.html
